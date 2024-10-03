@@ -4,17 +4,85 @@
     <meta charset="UTF-8" />
     <title>Title</title>
     <style>
+      /*кнопка*/
+      .button {
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #1b0355;
+        border: none;
+        border-radius: 15px; /* заокруглені кути*/
+        box-shadow: 0 9px #999;
+      }
+
+      /*анімації*/
+      div {
+        width: 100%;
+        height: 100px;
+        background-color: rgba(83, 88, 73, 0.658);
+        animation-name: initial;
+        animation-duration: 4s;
+      }
+
+      @keyframes example {
+        from {
+          background-color: rgba(81, 47, 53, 0.568);
+        }
+        to {
+          background-color: aqua;
+        }
+      }
+
+      /*підказки*/
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /*створення стовпців*/
+      .newspaper {
+        column-count: 3;
+      }
+
+      /*випадаючі списки*/
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+
+      /*тіньові ефекти*/
       #para1 {
         text-align: center;
         color: rgb(64, 36, 147);
+        text-shadow: 2px 2px;
       }
+
+      /*переходи*/
+      .box {
+        width: 100px;
+        height: 100px;
+        background: blue;
+        transition: width 2s;
+      }
+
+      .box:hover {
+        width: 300px;
+      }
+
       .center {
         text-align: center;
         color: rgb(29, 167, 77);
       }
-      .newspaper {
-        column-count: 3;
-      }
+
       body {
         background-color: rgba(176, 91, 91, 0.233);
       }
@@ -40,43 +108,12 @@
       tr:nth-child(even) {
         background-color: #f2f2f2;
       }
-      div {
-        width: 100%;
-        height: 100px;
-        background-color: rgba(83, 88, 73, 0.658);
-        animation-name: initial;
-        animation-duration: 4s;
-      }
 
-      @keyframes example {
-        from {
-          background-color: rgba(81, 47, 53, 0.568);
-        }
-        to {
-          background-color: aqua;
-        }
-      }
       .dropdown {
         position: relative;
         display: inline-block;
       }
 
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        padding: 12px 16px;
-        z-index: 1;
-      }
-
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-      #para1 {
-        text-shadow: 2px 2px;
-      }
       div.test {
         white-space: nowrap;
         width: 200px;
@@ -106,20 +143,6 @@
       .btn-group .button:hover {
         background-color: #4f3e8e;
       }
-      .button {
-        display: inline-block;
-        padding: 15px 25px;
-        font-size: 24px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: #1b0355;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-      }
 
       .button:hover {
         background-color: #3e8e41;
@@ -129,16 +152,6 @@
         background-color: #920f41;
         box-shadow: 0 5px #666;
         transform: translateY(4px);
-      }
-      .box {
-        width: 100px;
-        height: 100px;
-        background: blue;
-        transition: width 2s;
-      }
-
-      .box:hover {
-        width: 300px;
       }
 
       .box2 {
